@@ -1,5 +1,6 @@
 {
-    "DAC_name": "eosDAC",
+    "dacName": "eosDAC",
+    "dacScope": "eosdac",
     "contracts": {
         
         "token": {
@@ -60,6 +61,12 @@
                 ]
             },
             {
+                "name":"eosdactokens", 
+                "linkedAuths": [
+                    {"contract": "eosdactokens", "action": "newmemterms", "permission": "active", "label": "Update Constitution"}
+                ]
+            },
+            {
                 "name":"dacauthority", 
                 "linkedAuths":[
                     {"contract": "daccustodian", "action": "firecust", "permission": "med", "label": "Fire Custodian"},
@@ -74,6 +81,7 @@
         "bpnodes": "https://eosdac.io/topnodes.json",
         "memberclient": "https://toolkit-api.eosdac.io",
         "memberclient_state_api": "https://api.eosdac.io/v1/eosdac",
+        "hyperion": "https://eos.hyperion.eosrio.io/v2/state",
         "firehose": "ws://bos.eosdac.io:1337"
     },
 
